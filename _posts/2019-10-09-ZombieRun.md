@@ -22,7 +22,7 @@ comments: false
 
 ## 플레이 영상
 
-<iframe width="560" height="315" src="//www.youtube.com/watch?v=1fG-GrtirJk" frameborder="0"> </iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1fG-GrtirJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 게임 방법
 1. WASD를 사용해서 좀비 무리를 조종
