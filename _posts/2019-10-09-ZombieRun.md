@@ -5,11 +5,8 @@ date:   2019-10-09
 excerpt: "좀비가 되어 마을을 파괴하는 게임"
 project: true
 tag:
-- jekyll 
-- moon
-- blog
-- about
-- theme
+- C#
+- Unity
 comments: false
 ---
 
@@ -19,6 +16,8 @@ comments: false
 항상 좀비라고 핍박을 받던 좀비가 화났다!!!!!
 
 이제 좀비가 되어 사람들을 좀비로 만들자...!!
+
+[Bitbucket](https://bitbucket.org/aszd0708/zombie-run)
 
 ## 플레이 영상
 
