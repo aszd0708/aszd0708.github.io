@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Zombie Run!!"
-date:   2020-04-25
+date:   2019-10-09
 excerpt: "좀비가 되어 마을을 파괴하는 게임"
 project: true
 tag:
