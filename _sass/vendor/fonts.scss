@@ -128,3 +128,16 @@
   src: local('Inconsolata Bold'), local('Inconsolata-Bold'), url(https://fonts.gstatic.com/s/inconsolata/v12/AIed271kqQlcIRSOnQH0yYlIZu-HDpmDIZMigmsroc4.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+// korean
+@font-face {
+	font-family: "Nanum Gothic";
+	font-style: normal;
+	font-weight: 400;
+	src: url( "../fonts/Nanum/nanum-gothic-v9-korean_latin-regular.woff2" ) format( "woff2" ), url( "./images/nanum-gothic-v9-korean_latin-regular.woff2" ) format( "woff2" );
+}
+@font-face {
+	font-family: "Nanum Gothic";
+	font-style: normal;
+	font-weight: 700;
+	src: url( "../fonts/Nanum/nanum-gothic-v9-korean_latin-700.woff2" ) format( "woff2" ), url( "./images/nanum-gothic-v9-korean_latin-700.woff2" ) format( "woff2" );
+}
