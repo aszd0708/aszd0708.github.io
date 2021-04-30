@@ -15,7 +15,7 @@ comments: false
 항상 재밌는 게임을 좋게 만들기 위해 노력하고 있습니다.
 
 ## Contact
-- Email : [aszd0708@gmail.com](aszd0708@gmail.com){:target="_blank"}
+- Email : <aszd0708@gmail.com>
 - Github : [https://github.com/aszd0708](https://github.com/aszd0708){:target="_blank"}
 - Bitbucket : [https://bitbucket.org/aszd0708](https://bitbucket.org/aszd0708){:target="_blank"}
 
