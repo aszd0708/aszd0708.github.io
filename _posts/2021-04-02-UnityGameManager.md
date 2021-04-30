@@ -1,0 +1,286 @@
+---
+layout: post
+title:  "UnityGameManagers"
+date:   2021-04-02
+excerpt: "각종 게임 제작에 사용했던 유틸리티"
+project: true
+tag:
+- C#
+- Unity
+- Utilituy
+comments: false
+---
+
+# UnityGameManagers
+
+대부분 파일 안에 주석으로 함수 설명 되어 있습니다.
+간단한 사용법이 있습니다.
+
+## Managers
+
+이름을 누르면 설명이 나옵니다.
+
+### PoolingManager
+
+SetPool 을 사용해서 오브젝트를 SetActive(false)를 시킨 다음 SetPool에 있던 PoolingName 으로 새로운 카테고리를 만들어 넣어줌 만약 카테고리가 있을경우 그 카테고리로 넣어줌
+그리고 GetPool을 사용해서 원하는 카테고리에 있는 오브젝트를 가져올 수 있음 만약 없을경우 null을 반환
+사용시 받아올때 null을 받을 경우 null을 체크 한 뒤 원하는 오브젝트 생성해서 사용
+
+#### SetPool
+```
+public void SetPool(GameObject setPoolObj, string typeName)
+    {
+        setPoolObj.transform.SetParent(CheckPoolType(typeName));
+        setPoolObj.SetActive(false);
+    }
+```
+SetPooling 을 사용하여 풀링 타입 검사 후 없으면 타입을 만들고 있으면 그 타입에 자식으로 만들어 넣음
+
+```
+public void SetPool(GameObject setPoolObj, string typeName, float time)
+    {
+        StartCoroutine(SetPoolingDelay(setPoolObj, typeName, time));
+    }
+
+    private IEnumerator SetPoolingDelay(GameObject setPoolObj, string typeName, float time)
+    {
+        yield return new WaitForSeconds(time);
+        SetPool(setPoolObj, typeName);
+        yield break;
+    }
+```
+뒤에 시간을 넣으면 그 시간 뒤에 풀링을 시켜줌
+
+#### GetPool
+```
+ public GameObject GetPool(string typeName, Transform parent = null)
+    {
+        GameObject getPoolObj;
+
+        Transform pooledTypeParent = CheckGetPoolType(typeName);
+
+        if (pooledTypeParent == null)
+            return null;
+
+        else if (pooledTypeParent.childCount <= 2)
+            return null;
+
+        getPoolObj = pooledTypeParent.GetChild(0).gameObject;
+        getPoolObj.SetActive(true);
+        getPoolObj.transform.SetParent(parent);
+        getPoolObj.transform.localPosition = Vector3.zero;
+
+        return getPoolObj;
+    }
+```
+풀링 타입을 입력하면 맨 위에 있는 오브젝트를 꺼내줌
+
+
+### AudioManager
+
+#### PlaySound
+```
+public void PlaySound(string clipName, Vector3 pos, Transform parent = null, float pitch = 1f)
+    {
+        //clips에 있는 모든 AudioClip을 순환하며, 전달받은 clipName과 같은 이름의 클립을 찾아줌
+        foreach (AudioClip ac in clips)
+        {
+            if (ac.name == clipName)
+            {
+                //찾은 소리를 실제로 재생해달라고 패러미터 넘겨줌
+                PlaySound(ac, pos, parent, pitch);
+            }
+        }
+    }
+```
+파일 이름으로 플레이 하거나
+이름들을 넘겨 랜덤으로 플레이를 해줌
+
+```
+public void PlaySound(AudioClip audioClip, Vector3 pos, Transform parent = null, float pitch = 1f)
+    {
+        //오디오 재생용 프리팝 생성
+        AudioSource audioInstance = Instantiate(audioPrefab, pos, Quaternion.identity);
+
+        //소리를 내는 사물을 따라가야 하는 경우, 그 사물의 자식으로 넣어줌
+        if (parent != null)
+            audioInstance.transform.SetParent(parent);
+
+        audioInstance.clip = audioClip;     //클립을 바꿔주고
+        audioInstance.pitch = pitch;        //피치값 설정
+        audioInstance.volume = PlayerPrefs.GetInt("EffectSound", 1);
+        audioInstance.Play();               //재생
+
+        Destroy(audioInstance.gameObject, audioClip.length);       //오디오클립을 재생 후 인스턴스 삭제
+        PoolingManager.Instance.SetPool(audioInstance.gameObject, "Audio", audioClip.length);       // 만약 PoolingManager를 사용하고 있다면 위에 Destroy를 지운뒤 이것 사용
+    }
+```
+실질적인 플레이 함수
+
+### PoolingManager
+
+팝업 창이 나올때 눌러도 괜찮은 UI와 누르면 안되는 UI를 나눠 막아둠
+현재 까지의 팝업창의 갯수가 0 초과일 경우에 터치를 막아둠
+
+```
+ public int PopupCount
+    {
+        get => popupCount;
+        set
+        {
+            popupCount = value;
+
+            if (PopupCount < 0)
+                PopupCount = 0;
+
+            if (PopupCount > 0)
+            {
+                for (int i = 0; i < popupNotPanel.Length; i++)
+                    popupNotPanel[i].SetActive(false);
+
+                for (int i = 0; i < popupNotBtn.Length; i++)
+                    popupNotBtn[i].enabled = false;
+
+                switch(nowSceneKind)
+                {
+                    case SceneKind.STAGE:
+                        stageTouchManager.CanTouch = false;
+                        break;
+                    case SceneKind.MAIN:
+
+                        break;
+                    case SceneKind.GATCHA:
+                        break;
+                    default: break;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < popupNotPanel.Length; i++)
+                    popupNotPanel[i].SetActive(true);
+
+                for (int i = 0; i < popupNotBtn.Length; i++)
+                    popupNotBtn[i].enabled = true;
+
+                switch (nowSceneKind)
+                {
+                    case SceneKind.STAGE:
+                        stageTouchManager.CanTouch = true;
+                        break;
+                    case SceneKind.MAIN:
+                        break;
+                    case SceneKind.GATCHA:
+                        break;
+                    default: break;
+                }
+            }
+        }
+    }
+```
+팝업 카운트를 하나씩 늘려가면서 0이 아닐경우 터치를 제한해줌
+
+### ObserverPatternClass 
+```
+public abstract class AchievementSubject : Singleton<AchievementSubject>
+{
+    [SerializeField]
+    protected List<AchievementObserver> observers = new List<AchievementObserver>();
+
+    /// <summary>
+    /// 옵저버 더하는 함수
+    /// </summary>
+    public abstract void AddObserver(AchievementObserver observer);
+
+    /// <summary>
+    /// 옵저버 제거하는 함수
+    /// </summary>
+    public abstract void RemoveObserver(AchievementObserver observer);
+
+    /// <summary>
+    /// 옵저버 검사 후 실행
+    /// </summary>
+    public abstract void Notify();
+}
+```
+옵저버는 AchievementObserver를 조건 달성은 AchievementSubject을 상속해서 사용
+
+```
+public abstract class AchievementObserver : MonoBehaviour
+{
+    //public GooglePlayGameManager GPGM;
+
+    public abstract void GetAcheivement();
+}
+```
+특정한 조건에 옵저버들을 감시해야 할 사항이 생기면 AchievementSubject의 Notify()를 실행시키면 옵저버들의 조건을 검사 한 뒤 그 옵저버의 조건 달성 이벤트를 실행시켜줌
+
+### SaveManager
+
+```
+public abstract class SaveData<T> : MonoBehaviour
+{
+    
+    private T data;
+
+    /// <summary>
+    /// 제네릭 자료형 데이터 프로퍼티
+    /// </summary>
+    public T Data { get => data; set => data = value; }
+
+    /// <summary>
+    /// 데이터 디폴트값으로 설정하는 함수
+    /// </summary>
+    public abstract void SetDefaultData();
+
+    /// <summary>
+    /// 이름으로 검색 후 수정
+    /// 그런뒤 그 데이터 반환
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    public abstract T EditData(string value);
+
+    /// <summary>
+    /// 인덱스로 검색 후 수정
+    /// 그런뒤 그 데이터 반환
+    /// </summary>
+    /// <param name="index"></param>
+    /// <returns></returns>
+    public abstract T EditData(int index);
+}
+```
+각각 DefaultData를 만들어 세이브 데이터가 없을때 호출
+
+```
+public class SaveDataManager : DataManager<GameData>
+{
+    [Header("각 데이터 매니저들")]
+    public PlayerDataManager playerDataManager;
+    public AnimalDataManager animalDataManager;
+    public ItemDataManager itemDataManager;
+    public LetterDataManager letterDataManager;
+    '
+    '
+    '
+}
+```
+원하는 데이터들을 만들어 새로운 데이터 클래스를 제네릭으로 받고 상속하여 사용
+
+Letter,Player,Item,Animal은 직접 사용한 방법이며, 이렇게 사용하면 좋음
+
+### Singleton
+씬마다 무조건 1개 있어야 하며, 2개 이상 있을경우가 없고 자원을 공유 해야 하는 컴포넌트에서만 사용
+
+만약 호출 빈도가 적거나 위에 원칙에 해당이 안되는 경우라면, 안쓰는게 더 좋음
+
+이 문서에는 PoolingManager, AudioManager, PopupManager, SaveData 정도에 사용함
+
+위 4개의 컴포넌트는 자원을 공유해야 하는 컴포넌트 이기 때문에 사용함
+
+### JsonManager
+제이슨을 사용하는 경우에 제이슨 에 맞는 클래스를 만든 뒤 상속해서 사용
+
+게임이 실행될때 읽음
+
+만약 늦게 불려오는 문제가 있다면 유니티 엔진 내에서 스크립트 실행 순서를 바꿔줘야함
+JsonManager를 상속하고 있는 컴포넌트가 제일 위로 올라와야 오류가 안 생김
