@@ -7,18 +7,17 @@ project: true
 tag:
 - C#
 - Unity
-- Utilituy
+- Utility
 comments: false
 ---
 
 # UnityGameManagers
 
-대부분 파일 안에 주석으로 함수 설명 되어 있습니다.
-간단한 사용법이 있습니다.
+## 소개
+
+제가 직접 유니티를 활용해서 프로젝트를 진핼 할 때 진행할 프로젝트 내에서 사용하는 기능들을 바로 사용 할 수 있게 제작한 매니저들 입니다.
 
 ## Managers
-
-이름을 누르면 설명이 나옵니다.
 
 ### PoolingManager
 
@@ -49,7 +48,9 @@ public void SetPool(GameObject setPoolObj, string typeName, float time)
         yield break;
     }
 ```
-뒤에 시간을 넣으면 그 시간 뒤에 풀링을 시켜줌
+뒤에 시간을 넣게 되면
+
+코루틴으로 타이머가 돈 뒤 풀링을 시켜줌
 
 #### GetPool
 ```
@@ -202,7 +203,9 @@ public abstract class AchievementSubject : Singleton<AchievementSubject>
     public abstract void Notify();
 }
 ```
-옵저버는 AchievementObserver를 조건 달성은 AchievementSubject을 상속해서 사용
+옵저버는 AchievementObserver를 상속
+
+ 조건 달성은 AchievementSubject을 상속해서 사용
 
 ```
 public abstract class AchievementObserver : MonoBehaviour
@@ -212,7 +215,9 @@ public abstract class AchievementObserver : MonoBehaviour
     public abstract void GetAcheivement();
 }
 ```
-특정한 조건에 옵저버들을 감시해야 할 사항이 생기면 AchievementSubject의 Notify()를 실행시키면 옵저버들의 조건을 검사 한 뒤 그 옵저버의 조건 달성 이벤트를 실행시켜줌
+특정한 조건에 옵저버들을 감시해야 할 사항이 생기면 AchievementSubject의 Notify()를 실행시키면 옵저버들의 조건을 검사 
+
+그 뒤에 옵저버의 조건 달성 이벤트를 실행시켜줌
 
 ### SaveManager
 
@@ -266,21 +271,23 @@ public class SaveDataManager : DataManager<GameData>
 ```
 원하는 데이터들을 만들어 새로운 데이터 클래스를 제네릭으로 받고 상속하여 사용
 
-Letter,Player,Item,Animal은 직접 사용한 방법이며, 이렇게 사용하면 좋음
+Letter,Player,Item,Animal은 직접 사용한 방법
+
+이렇게 사용하게 되면 여러가지 데이터들을 한번에 묶어서 파일을 저장할 수 있게 되어 관리하기 편해짐
 
 ### Singleton
 씬마다 무조건 1개 있어야 하며, 2개 이상 있을경우가 없고 자원을 공유 해야 하는 컴포넌트에서만 사용
 
-만약 호출 빈도가 적거나 위에 원칙에 해당이 안되는 경우라면, 안쓰는게 더 좋음
+만약 호출 빈도가 적거나 위에 원칙에 해당이 안되는 경우라면, 사용하지 않는 것이 더 좋음
 
 이 문서에는 PoolingManager, AudioManager, PopupManager, SaveData 정도에 사용함
 
 위 4개의 컴포넌트는 자원을 공유해야 하는 컴포넌트 이기 때문에 사용함
 
 ### JsonManager
-제이슨을 사용하는 경우에 제이슨 에 맞는 클래스를 만든 뒤 상속해서 사용
 
-게임이 실행될때 읽음
+제이슨을 사용하는 경우에 제이슨 에 맞는 클래스를 제작 후 상속해서 사용
 
-만약 늦게 불려오는 문제가 있다면 유니티 엔진 내에서 스크립트 실행 순서를 바꿔줘야함
-JsonManager를 상속하고 있는 컴포넌트가 제일 위로 올라와야 오류가 안 생김
+Awake()에서 실행됨
+
+Awake()가 실행될 때 이 컴포넌트를 사용하는 경우가 있을 경우 유니티 엔진 내에서 스크립트 실행 순서를 바꿔줘야 에러 없이 실행
