@@ -18,7 +18,7 @@ comments: false
 
 이제 좀비가 되어 사람들을 좀비로 만들자...!!
 
-[Bitbucket](https://bitbucket.org/aszd0708/zombie-run)
+[Bitbucket](https://bitbucket.org/aszd0708/zombie-run){:target="_blank"}
 
 ## 플레이 영상
 
@@ -32,10 +32,10 @@ comments: false
 5. 좀비는 각종 물건들을 들 수 있으며, F 키를 눌러 물건을 던져 공격할 수 있습니다.
 
 ## 사용한 라이브러리
-[DoTween](http://dotween.demigiant.com/) : 움직임을 간단하게 구현 할 때 사용
+[DoTween](http://dotween.demigiant.com/){:target="_blank"} : 움직임을 간단하게 구현 할 때 사용
 
 ## 직접 제작한 유틸리티
-[UnityManagers](https://github.com/aszd0708/UnityGameManagers) : 저장, 풀링, 팝업등 사용
+[UnityManagers](https://github.com/aszd0708/UnityGameManagers){:target="_blank"} : 저장, 풀링, 팝업등 사용
 
 ## 제작
 ### 기간
