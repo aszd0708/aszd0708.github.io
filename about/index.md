@@ -12,10 +12,10 @@ comments: false
 
 2015년부터 게임프로그래밍을 공부하고 있습니다.
 
-
+항상 재밌는 게임을 좋게 만들기 위해 노력하고 있습니다.
 
 ## Contact
-- Email : aszd0708@gmail.com
+- Email : [aszd0708@gmail.com](aszd0708@gmail.com){:target="_blank"}
 - Github : [https://github.com/aszd0708](https://github.com/aszd0708){:target="_blank"}
 - Bitbucket : [https://bitbucket.org/aszd0708](https://bitbucket.org/aszd0708){:target="_blank"}
 
