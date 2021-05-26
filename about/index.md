@@ -39,18 +39,18 @@ comments: false
 
 ### Unity
 
-- [UnityManagers](https://github.com/aszd0708/UnityGameManagers){:target="_blank"} : 유니티 프로젝트 제작중 사용한 자체제작 유틸리티
+- [UnityManagers](https://aszd0708.github.io/UnityGameManager/){:target="_blank"} : 유니티 프로젝트 제작중 사용한 자체제작 유틸리티
 
-- [집사가 돼 줄 고양?(가제)](https://bitbucket.org/aszd0708/meow-_versionup/src/master/){:target="_blank"} : 마을에 있는 동물들을 찾아서 동물의 집에 보내는 모바일 게임
+- [집사가 돼 줄 고양?(가제)](https://aszd0708.github.io/Meow/){:target="_blank"} : 마을에 있는 동물들을 찾아서 동물의 집에 보내는 모바일 게임
 
-- [I'm ATM](https://bitbucket.org/aszd0708/imatm/src/master/){:target="_blank"} : 자신이 직접 고장난 ATM 기기에 들어가서 돈을 인출해주는 아케이드 핸드폰 게임 ([GooglePlayStore 정식출시](https://play.google.com/store/apps/details?id=com.MatZip.ImATM){:target="_blank"})
+- [I'm ATM](https://aszd0708.github.io/ImATM/){:target="_blank"} : 자신이 직접 고장난 ATM 기기에 들어가서 돈을 인출해주는 아케이드 핸드폰 게임 ([GooglePlayStore 정식출시](https://play.google.com/store/apps/details?id=com.MatZip.ImATM){:target="_blank"})
 
-- [Zombie Run!!!!](https://bitbucket.org/aszd0708/zombie-run/src/master/){:target="_blank"} : 직접 자신이 좀비 무리를 조종하여 마을을 공격하는 게임
+- [Zombie Run!!!!](https://aszd0708.github.io/ZombieRun/){:target="_blank"} : 직접 자신이 좀비 무리를 조종하여 마을을 공격하는 게임
 
 ### Unreal
 
-- [SoulLike](https://github.com/aszd0708/SoulLike){:target="_blank"} : 소울류 게임을 모방해서 만든 토이 프로젝트
+- [SoulLike](https://aszd0708.github.io/SoulLike/){:target="_blank"} : 소울류 게임을 모방해서 만든 토이 프로젝트
 
 ### Android
 
-- [세탁기 알람](https://github.com/aszd0708/CoolTime){:target="_blank"} : 교내 기숙사의 세탁기 알람
+- [세탁기 알람](https://aszd0708.github.io/CoolTime/){:target="_blank"} : 교내 기숙사의 세탁기 알람
