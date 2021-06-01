@@ -3,7 +3,7 @@ layout: post
 title:  "DirectX Rendering Pipeline"
 date:   2021-04-25
 excerpt: "DirectX Rendering Pipeline 설명"
-project: true
+project: false
 tag:
 - C++
 - DirectX
