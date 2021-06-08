@@ -1,0 +1,169 @@
+---
+layout: post
+title:  "Multi Thread 공부 1일차"
+date:   2021-06-08
+excerpt: "Multi Thread 공부 1일차"
+tag:
+- C++
+- Multi Thread
+comments: false
+---
+언리얼에서 멀티 스레드로 렌더링 해보고 싶어서 공부시작.
+# Thread?
+
+스레드란 프로세스의 실행 단위이다.
+
+```
+프로세스: 각각의 은행 지점
+스레드: 은행 지점 하나에 속한 고객 창구 여러 개
+```
+당연히 스레드가 많으면 많은 일을 빠르게 처리할 수 있을거다.
+
+<iframe width="560" height="315" src="https://www.youtube.com/M1e9nmmD3II" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+왜 멀티 스레드가 사용되었는지에 관해 설명하는 영상이다.
+
+## Multi Thread
+
+일단 연산이 아닌 스레드 실행부터 해보자
+
+```
+
+void TreadFunc(int threadid)
+{
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "Tread ID " << threadid << "\n";
+	}
+}
+
+int main()
+{
+	vector<thread> threads;
+
+	for (int i = 0; i < 4; i++)
+	{
+		threads.emplace_back(thread{ TreadFunc, i });
+	}
+
+	for (int i = 0; i < 4; i++)
+	{
+		threads[i].join();
+	}
+}
+```
+이렇게 코딩한 뒤 실행을 하게 되면
+```
+Tread ID Tread ID 2
+Tread ID 2
+Tread ID 2
+Tread ID 3
+Tread ID 3
+Tread ID 3
+Tread ID 1
+Tread ID 1
+Tread ID 1
+0
+Tread ID 0
+Tread ID 0
+```
+뭔기 이상하다. 1부터 실행했는데 2부터 나온다.
+
+다시 실행시켜보자 
+```
+Tread ID 0
+Tread ID 0
+Tread ID 0
+Tread ID 2
+Tread ID 2
+Tread ID 2
+Tread ID 1
+Tread ID 1
+Tread ID 1
+Tread ID 3
+Tread ID 3
+Tread ID 3
+```
+아까랑 실행순서가 다르다.
+
+이처럼 여러 스레드를 동시에 처리하기 때문에 실행 순서대로 되지 않는다.
+
+## 문제점
+그럼 이제 이 멀티 스레드로 연산을 해보자
+```
+int num = 0;
+
+void TreadFunc(int threadid)
+{
+	for (int i = 0; i < 10000000; i++)
+	{
+		num += 1;
+	}
+}
+
+int main()
+{
+	vector<thread> threads;
+
+	for (int i = 0; i < 2; i++)
+	{
+		threads.emplace_back(thread{ TreadFunc, i });
+	}
+
+	for (int i = 0; i < 2; i++)
+	{
+		threads[i].join();
+	}
+
+	cout << num << endl;
+}
+```
+
+전역변수 num에 + 2을 10000000번 해주는 스레드 2개를 실행한다.
+
+생각 대로라면 모두 끝났을때 num은 40000000이 돼야 한다.
+
+하지만!
+```
+20556000
+```
+뭔가 이상하다. 엄청 다른 값이 나왔다.
+
+어셈블리를 보면
+```
+00007FF6BD9F4A88  mov         eax,dword ptr [num (07FF6BDA03440h)]  
+00007FF6BD9F4A8E  add         eax,2  
+00007FF6BD9F4A91  mov         dword ptr [num (07FF6BDA03440h)],eax  
+```
+2가 있는 주소에서 값을 갖고온뒤
+
+2를 더하고
+
+다시 그 주소에 넣는것을 알 수 있다.
+
+여기서 중요한건 주소에서 값을 갖고오는 부분이다.
+
+```
+A 스레드에서 값을 갖고옴	(num = 0)(*num = 0)
+A 스레드가 값을 더함		(num = 2)(*num = 0)
+A 스레드가 다시 값을 넣음	(num = 2)(*num = 2)
+
+B 스레드에서 값을 갖고옴	(num = 2)(*num = 2)
+B 스레드가 값을 더함		(num = 4)(*num = 2)
+B 스레드가 다시 값을 넣음	(num = 4)(*num = 4)
+```
+이런 순서로 진행되면 완벽하다. 하지만, 우리가 쓰는건 병렬로 진행됨으로
+어떤 순서로 진행 될지 모든다.
+```
+A 스레드에서 값을 갖고옴	(num = 0)(*num = 0)
+
+B 스레드에서 값을 갖고옴	(num = 0)(*num = 0)
+A 스레드가 값을 더함		(num = 2)(*num = 0)
+A 스레드가 다시 값을 넣음	(num = 2)(*num = 2)
+
+B 스레드가 값을 더함		(num = 2)(*num = 2)
+B 스레드가 다시 값을 넣음	(num = 2)(*num = 2)
+```
+이처럼 두번 진행 됐는데 결과는 4가 나왔다. 
+
+지금은 int형으로 그냥 간단한 정수라 큰 문제가 없는거지, 만약 어떤 객체의 리소스를 바꾼다고 했을때 이런 문제가 발생하면 큰일난다.

@@ -1,0 +1,122 @@
+---
+layout: post
+title:  "Multi Thread 공부 1일차 (Data Race)"
+date:   2021-06-08
+excerpt: "Multi Thread 공부 1일차 (Data Race)"
+tag:
+- C++
+- Multi Thread
+comments: false
+---
+
+# Data Race
+저번 포스트에서 스레드에서 전역변수를 공유하는 문제가 발생했다.
+
+이런 문제를 'Data Race'라고 한다.
+
+## Lock Unlock 
+이러한 문제를 해결하는 방법으로는 'Lock Unlock'이 있다.
+
+Lock Unlock은 하나의 스레드가 하는동안 락을 걸어 락이 끝나기 전까지 대기하는 방법이다.
+
+일단
+```
+#include <thread>
+#include <iostream>
+#include <vector>
+#include <mutex>
+
+using namespace std;
+using namespace std::chrono;
+
+int num = 0;
+mutex mt;
+
+void TreadFunc(int threadid)
+{
+	for (int i = 0; i < 10000000; i++)
+	{
+		mt.lock();
+		num += 2;
+		mt.unlock();
+	}
+}
+
+int main()
+{
+	vector<thread> threads;
+
+	for (int i = 0; i < 2; i++)
+	{
+		threads.emplace_back(thread{ TreadFunc, i });
+	}
+
+	for (int i = 0; i < 2; i++)
+	{
+		threads[i].join();
+	}
+
+	cout << num << endl;
+}
+```
+실행시켜보자
+```
+40000000
+```
+오 잘 나오는데....??
+
+뭔가 이상하다 많이 느린 느낌이다.
+
+한번 시간을 재보자
+
+```
+int main()
+{
+	vector<thread> threads;
+
+	steady_clock::time_point start_time = high_resolution_clock::now();
+
+	for (int i = 0; i < 2; i++)
+	{
+		threads.emplace_back(thread{ TreadFunc, i });
+	}
+
+	for (int i = 0; i < 2; i++)
+	{
+		threads[i].join();
+	}
+	steady_clock::time_point end_time = high_resolution_clock::now();
+	auto time = end_time - start_time;
+	int result_time = duration_cast<milliseconds>(time).count();
+	cout << num << endl;
+	cout << "Result : " << result_time << endl;
+}
+```
+```
+40000000
+Result : 1269
+```
+와.... 심하다... 한번 결과 신경 안쓰고 lock을 빼보면
+
+```
+21135520
+Result : 48
+```
+와! 빠르다.
+
+그럼 스레드 할당받지 않다면
+
+```
+40000000
+Result : 39
+```
+뭐지...? 멀티 스레드를 사용했는데 더 느렸졌다...
+
+이유는
+
+스레드가 lock을 만나면 lock이 풀릴때까지 계속해서 쉰다.
+
+그러니까 계속 교대를 하면서 연산을 하니 느려지는 것이다.
+
+
+
