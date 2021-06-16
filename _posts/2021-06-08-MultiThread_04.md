@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Multi Thread 공부 3일차 (List - 성긴 동기화)"
-date:   2021-06-10
-excerpt: "Multi Thread 공부 3일차 (List - 성긴 동기화)"
+title:  "Multi Thread 공부 4일차 (List - 성긴 동기화)"
+date:   2021-06-11
+excerpt: "Multi Thread 공부 4일차 (List - 성긴 동기화)"
 tag:
 - C++
 - Multi Thread
@@ -143,6 +143,7 @@ int main()
 {
 	for (int i = 1; i <= 8; i *= 2)
 	{
+		temp_list.Clear();
 		steady_clock::time_point start_time = high_resolution_clock::now();
 		vector<thread> v;
 		for (int j = 0; j < i; j++)
@@ -204,21 +205,19 @@ bool Add(int key)
 ```
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 스레드 갯수 : 1
-걸린 시간 : 198
+걸린 시간 : 201
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 스레드 갯수 : 2
-걸린 시간 : 788
+걸린 시간 : 207
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 스레드 갯수 : 4
-걸린 시간 : 1253
+걸린 시간 : 185
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 스레드 갯수 : 8
-걸린 시간 : 1784
+걸린 시간 : 186
 ```
 값은 잘 들어간다.
 
-하지만 문제가 있다. 위에서 말한 성긴동기화의 특성 상 멀티스레드 효과를 못본다. 
-
-아니 시간이 더 걸리는것 같다.
+하지만 문제가 있다. 있는것과 없는것이 큰 차이가 없다. 이러면 쓰레드를 쓰는 이유가 없어진다.
 
 [출처](https://popcorntree.tistory.com/15?category=813523)
