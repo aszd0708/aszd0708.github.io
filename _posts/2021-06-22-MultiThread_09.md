@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Multi Thread 공부 8일차 (합의 객체, 합의 수)"
-date:   2021-06-22
+date:   2021-06-23
 excerpt: "Multi Thread 공부 8일차 (합의 객체, 합의 수)"
 tag:
 - C++
