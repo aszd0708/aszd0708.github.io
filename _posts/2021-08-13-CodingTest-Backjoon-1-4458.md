@@ -14,7 +14,9 @@ comments: false
 
 [문제](https://www.acmicpc.net/problem/4458)
 
-<img src = "../assets/img/project/codingtest/backjoon/not_zelda_link.jpg" width="100%">
+<img src = "../assets/img/project/codingtest/backjoon/not_zelda_link.jpg" width="50%">
+
+(젤다 아니다 링크다 ㅋㅋㅋㅋ)
 
 처음에는 BFS, DFS 그래프 문제인 줄 알고 풀었는데 최단 경로의 비용을 구하는 것이기 때문에 다익스트라 알고리즘이다.
 
