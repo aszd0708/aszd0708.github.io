@@ -2,7 +2,7 @@
 layout: post
 title:  "코딩테스트 백준 - 8858"
 date:   2021-08-12
-excerpt: "딩테스트 백준 - 8858"
+excerpt: "코딩테스트 백준 - 8858"
 tag:
 - C++
 - CodingTest
@@ -11,6 +11,8 @@ comments: false
 ---
 
 <img src = "../assets/img/project/codingtest/backjoon/5585.PNG" width="100%">
+
+[문제](https://www.acmicpc.net/problem/5585)
 
 그리드 문제중에 가장 간단한 문제이다.
 

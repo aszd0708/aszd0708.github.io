@@ -2,7 +2,7 @@
 layout: post
 title:  "코딩테스트 백준 - 4949"
 date:   2021-08-13
-excerpt: "딩테스트 백준 - 4949"
+excerpt: "코딩테스트 백준 - 4949"
 tag:
 - C++
 - CodingTest
