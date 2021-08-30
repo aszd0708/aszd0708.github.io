@@ -16,7 +16,7 @@ comments: false
 ## MainPlayer Class
 
 <details>
-<summary>MainPlayer.h</summary>
+<summary style="color:green">MainPlayer.h</summary>
 <div markdown="1">
 
 ```
@@ -68,7 +68,7 @@ public:
 </details>
 
 <details>
-<summary>MainPlayer.cpp</summary>
+<summary style="color:green">MainPlayer.cpp</summary>
 <div markdown="1">
 
 ```

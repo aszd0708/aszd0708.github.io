@@ -26,7 +26,7 @@ comments: false
 Actor를 상속받아 WeaponBase를 만들어준다.
 
 <details>
-<summary>WeaponBase.h</summary>
+<summary style="color:green">WeaponBase.h</summary>
 <div markdown="1">
 
 ```
@@ -131,7 +131,7 @@ public:
 </details>
 
 <details>
-<summary>WeaponBase.cpp</summary>
+<summary style="color:green">WeaponBase.cpp</summary>
 <div markdown="1">
 
 ```

@@ -21,7 +21,7 @@ comments: false
 캐릭터를 부모로 갖고있는 MainPlayer를 만들어두자
 
 <details>
-<summary>MainPlayer.h</summary>
+<summary style="color:green">MainPlayer.h</summary>
 <div markdown="1">
 
 ```
@@ -126,7 +126,7 @@ public:
 일단 간단하게 움직이는 것들과 카메라 정도만 만들어두자
 
 <details>
-<summary>MainPlyer.h</summary>
+<summary style="color:green">MainPlyer.h</summary>
 <div markdown="1">
 
 ```
@@ -246,7 +246,7 @@ void AMainPlayer::LookUpAtRate(float Rate)
 그런 뒤, AnimInstance를 만들어준다.
 
 <details>
-<summary>MainPlyerAnimInstance.h</summary>
+<summary style="color:green">MainPlyerAnimInstance.h</summary>
 <div markdown="1">
 
 ```
@@ -359,3 +359,10 @@ void UMainPlayerAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 이렇게 한뒤, 두개 전부 블루프린트를 만들어서 적용해주자.
 
+<img src = "../assets/img/project/unreal_project_dark/01/mainplayer_movement_blendstate.PNG" width="100%">
+
+움직이는 BlendState를 만든 뒤, 이 플레이어의 현재 스피드와 방향을 갖고와서 적용시키면
+
+<img src = "../assets/img/project/unreal_project_dark/01/movement.gif" width="30%">
+
+이동이 잘 된다.
