@@ -4,7 +4,6 @@ title:  "ProjectDark - 02 - Create Weapon Base"
 date:   2021-08-23
 excerpt: "ProjectDark - 02 - Create Weapon Base"
 tag:
-- C++
 - Unreal
 comments: false
 ---

@@ -4,7 +4,6 @@ title:  "코딩테스트 백준 - 16234"
 date:   2021-08-16
 excerpt: "코딩테스트 백준 - 16234"
 tag:
-- C++
 - CodingTest
 - 백준
 comments: false

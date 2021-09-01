@@ -5,7 +5,6 @@ date:   2021-04-25
 excerpt: "DirectX Rendering Pipeline 설명"
 project: false
 tag:
-- C++
 - DirectX
 comments: false
 ---

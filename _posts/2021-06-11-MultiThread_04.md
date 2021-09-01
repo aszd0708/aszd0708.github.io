@@ -4,7 +4,6 @@ title:  "Multi Thread 공부 4일차 (List - 성긴 동기화)"
 date:   2021-06-11
 excerpt: "Multi Thread 공부 4일차 (List - 성긴 동기화)"
 tag:
-- C++
 - Multi Thread
 comments: false
 ---

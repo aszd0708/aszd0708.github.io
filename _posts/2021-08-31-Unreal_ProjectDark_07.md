@@ -4,7 +4,6 @@ title:  "ProjectDark - 07 - Equipment Weapon"
 date:   2021-08-31
 excerpt: "ProjectDark - 07 - Equipment Weapon"
 tag:
-- C++
 - Unreal
 comments: false
 ---
