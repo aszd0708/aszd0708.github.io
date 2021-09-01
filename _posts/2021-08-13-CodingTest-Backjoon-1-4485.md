@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 4458"
+title:  "코딩테스트 백준 - 4485"
 date:   2021-08-13
-excerpt: "코딩테스트 백준 - 4458"
+excerpt: "코딩테스트 백준 - 4485"
 tag:
 - CodingTest
 comments: false
@@ -23,7 +23,7 @@ comments: false
 일단 BFS로 풀면
 
 <details>
-<summary>BFS</summary>
+<summary style="color:green">BFS</summary>
 <div markdown="1">
 
 ```
@@ -122,7 +122,7 @@ int main()
 다익스트라 알고리즘은 현재 비용과 다음 비용을 비교해서 우선순위 큐에 넣고 가장 비용이 작은 값만 비교하는 방법이다.
 
 <details>
-<summary>Dijkstra</summary>
+<summary style="color:green">Dijkstra</summary>
 <div markdown="1">
 
 ```

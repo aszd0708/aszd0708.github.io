@@ -195,17 +195,17 @@ public abstract class AchievementSubject : Singleton<AchievementSubject>
     [SerializeField]
     protected List<AchievementObserver> observers = new List<AchievementObserver>();
 
-    /// <summary>
+    /// <summary style="color:green">
     /// 옵저버 더하는 함수
     /// </summary>
     public abstract void AddObserver(AchievementObserver observer);
 
-    /// <summary>
+    /// <summary style="color:green">
     /// 옵저버 제거하는 함수
     /// </summary>
     public abstract void RemoveObserver(AchievementObserver observer);
 
-    /// <summary>
+    /// <summary style="color:green">
     /// 옵저버 검사 후 실행
     /// </summary>
     public abstract void Notify();
@@ -235,17 +235,17 @@ public abstract class SaveData<T> : MonoBehaviour
     
     private T data;
 
-    /// <summary>
+    /// <summary style="color:green">
     /// 제네릭 자료형 데이터 프로퍼티
     /// </summary>
     public T Data { get => data; set => data = value; }
 
-    /// <summary>
+    /// <summary style="color:green">
     /// 데이터 디폴트값으로 설정하는 함수
     /// </summary>
     public abstract void SetDefaultData();
 
-    /// <summary>
+    /// <summary style="color:green">
     /// 이름으로 검색 후 수정
     /// 그런뒤 그 데이터 반환
     /// </summary>
@@ -253,7 +253,7 @@ public abstract class SaveData<T> : MonoBehaviour
     /// <returns></returns>
     public abstract T EditData(string value);
 
-    /// <summary>
+    /// <summary style="color:green">
     /// 인덱스로 검색 후 수정
     /// 그런뒤 그 데이터 반환
     /// </summary>
