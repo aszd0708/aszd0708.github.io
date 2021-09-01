@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "ProjectDark - 06"
+title:  "ProjectDark - 06 - InteractionActor"
 date:   2021-08-31
-excerpt: "ProjectDark - 06"
+excerpt: "ProjectDark - 06 - InteractionActor"
 tag:
 - C++
 - Unreal

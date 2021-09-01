@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "ProjectDark - 05"
+title:  "ProjectDark - 05 - Weapon Anim Montage"
 date:   2021-08-30
-excerpt: "ProjectDark - 05"
+excerpt: "ProjectDark - 05 - Weapon Anim Montage"
 tag:
 - C++
 - Unreal

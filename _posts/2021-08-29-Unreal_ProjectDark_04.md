@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "ProjectDark - 04"
+title:  "ProjectDark - 04 - Atk Anim Notify"
 date:   2021-08-29
-excerpt: "ProjectDark - 04"
+excerpt: "ProjectDark - 04 - Atk Anim Notify"
 tag:
 - C++
 - Unreal
