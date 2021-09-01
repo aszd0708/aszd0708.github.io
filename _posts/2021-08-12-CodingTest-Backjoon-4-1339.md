@@ -5,7 +5,6 @@ date:   2021-08-12
 excerpt: "코딩테스트 백준 - 1339"
 tag:
 - CodingTest
-- 백준
 comments: false
 ---
 
