@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "ProjectDark - 01"
+title:  "ProjectDark - 01 - Create Main Player"
 date:   2021-08-20
-excerpt: "ProjectDark - 01"
+excerpt: "ProjectDark - 01 - Create Main Player"
 tag:
 - C++
 - Unreal

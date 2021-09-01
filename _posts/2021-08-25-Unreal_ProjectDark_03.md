@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "ProjectDark - 03"
+title:  "ProjectDark - 03 - Weapon Atk"
 date:   2021-08-25
-excerpt: "ProjectDark - 03"
+excerpt: "ProjectDark - 03 - Weapon Atk"
 tag:
 - C++
 - Unreal
@@ -72,6 +72,13 @@ public:
 <div markdown="1">
 
 ```
+void AMainPlayer::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	
+	ComboAttackCheck(); 
+}
+
 void AMainPlayer::ChangeWeapon()
 {
 	if (CurrentWeaponIndex < 0) { return; }
