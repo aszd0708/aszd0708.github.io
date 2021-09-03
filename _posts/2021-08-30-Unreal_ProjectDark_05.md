@@ -11,7 +11,7 @@ comments: false
 # AnimationMontage
 이제 이 전에 만들었던 AnimNotify들을 활용해서 실행시켜주자
 
-<img src = "../assets/img/project/unreal_project_dark/05/Hammer_Mesh.PNG" width="50%">
+<img src = "../assets/img/project/unreal_project_dark/05/0Hammer_Mesh.PNG" width="50%">
 
 이 무기를
 
@@ -19,7 +19,7 @@ comments: false
 
 이런 동작에 잘 넣어보자
 
-<img src = "../assets/img/project/unreal_project_dark/05/Hammer_AnimMontage_Combo1.PNG" width="80%">
+<img src = "../assets/img/project/unreal_project_dark/05/0Hammer_AnimMontage_Combo1.PNG" width="80%">
 
 (마지막은 AtkEndNotify다)
 이런 식으로 넣어서 각 무기의 공격마다 넣게 되면 애니메이션이 저 프레임을 지날 때 마다 저 노티파이들을 싱행시켜준다.
