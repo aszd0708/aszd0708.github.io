@@ -28,7 +28,8 @@ comments: false
 
 <img src = "../assets/img/project/unreal_project_dark/09/slow_motion.gif" width="50%">
 
-슬로우 모션은 잘 된다.
+슬로우 모션은 잘 된다.  
+(끊기는게 아니다 슬로우 모션 맞다.)
 
 그러면 이제 회피하면서 카운터 공격은?
 
