@@ -24,7 +24,7 @@ Post Order : 	8 4 9 5 2 10 6 11 7 3 1
 ```
           	<--Left--   ---Right-->
 In Order : 	8 4 2 9 5 1 10 6 3 11 7
-           	<--Left-- ---Right-->
+           	<--Left--   ---Right-->
 PostOrder : 	8 4 9 5 2 10 6 11 7 3 1
 ```
 
