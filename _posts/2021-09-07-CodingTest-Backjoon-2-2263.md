@@ -22,9 +22,9 @@ Post Order : 	8 4 9 5 2 10 6 11 7 3 1
 그 기준으로 왼쪽 노드 오른쪽 노드를 나눌 수 있다.
 
 ```
-			<--Left--   ---Right-->
+          	<--Left--   ---Right-->
 In Order : 	8 4 2 9 5 1 10 6 3 11 7
-			    <--Left-- ---Right-->
+           		<--Left-- ---Right-->
 PostOrder : 	8 4 9 5 2 10 6 11 7 3 1
 ```
 
