@@ -1,163 +1,103 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 21939"
-date:   2021-09-08
-excerpt: "코딩테스트 백준 - 21939"
+title:  "코딩테스트 백준 - 1005"
+date:   2021-09-15
+excerpt: "코딩테스트 백준 - 1005"
 tag:
 - CodingTest
 comments: false
 ---
 
-<img src = "../assets/img/project/codingtest/backjoon/21939.PNG" width="100%">
+<img src = "../assets/img/project/codingtest/backjoon/1005.PNG" width="100%">
 
-[문제](https://www.acmicpc.net/problem/21939)
+[문제](https://www.acmicpc.net/problem/1005)
 
-생각보다 어려웠고 생각보다 풀기 쉬웠던 문제였다.
+위상 정렬에 관한 문제이다.  
+처음 풀어본 알고리즘이기도 하고, 처음에는 위상 정렬이 아닌 그냥 DP로 풀었더니 시작 지점을 설정 못해서 틀렸었다.
 
-일단 두개의 우선순위 큐를 만들어 각각 난이도가 큰 문제, 작은 문제 순으로 설정해주자
-
-그런 뒤, 문제를 받으면 넣어준다
-
-이제 풀었는지 아니면 중복되는 문제인지는 큐를 다 빼서 수정하면 시간복잡도가 많이 늘어나기 때문에  
-map을 사용해서 풀었는지와, 문제 난이도가 수정됐는지만 체크해주자.
-
-마지막으로 recommend를 입력받을 때, 문제 난이도가 큐의 top과 맞지 않으면 pop해주고, 풀지 않았어도 pop해주고 다음것을 확인해서 출력해주자.
+위상 정렬에 관한 것은 처음들어봤는데  
+각 노드에 연결되어있는 갯수가 0인 노드만 골라서 그래프탐색을 하는것이다.  
+이렇게 하면 시작 노드에서 실행해서 각 노드가 끝나야지만 다음 노드가 실행되는 순서를 틀리지 않고 할 수 있기 때문에 사용한다.
 
 ```
-#include <stdio.h>
 #include <iostream>
+#include <stdio.h>
 
-#include <string>
-
+#include <vector>
 #include <queue>
 #include <map>
 
-using namespace std;
+using namespace std;   
 
-struct Backjoon
+struct Node
 {
+	int time;
 	int index;
-	int difficulty;
+	int weight;
+	vector<Node*> linkedNodes;
 };
 
-struct CompareMin
+int GetTime(vector<Node>& nodes, const int& lastIndex)
 {
-	bool operator()(const Backjoon& lValue, const Backjoon& rValue)
+	queue<Node*> q;
+	vector<int> times(nodes.size());
+	for (int i = 0; i < nodes.size(); i++)
 	{
-		if (lValue.difficulty == rValue.difficulty)
+		if (nodes[i].weight == 0)
 		{
-			return lValue.index > rValue.index;
+			q.push(&nodes[i]);
 		}
-		return lValue.difficulty > rValue.difficulty;
+		times[i] = nodes[i].time;
 	}
-};
-
-struct CompareMax
-{
-	bool operator()(const Backjoon& lValue, const Backjoon& rValue)
+	
+	while (nodes[lastIndex].weight > 0)
 	{
-		if (lValue.difficulty == rValue.difficulty)
+		Node* currentNode = q.front();
+		q.pop();
+		for (int i = 0; i < currentNode->linkedNodes.size(); i++)
 		{
-			return lValue.index < rValue.index;
-		}
-		return lValue.difficulty < rValue.difficulty;
-	}
-};
-
-map<int, bool> bIsSolved;
-map<int, int> newBackjoon;
-priority_queue<Backjoon, vector<Backjoon>, CompareMin> minPQ;
-priority_queue<Backjoon, vector<Backjoon>, CompareMax> maxPQ;
-
-void Add(const Backjoon& value)
-{
-	minPQ.push(value);
-	maxPQ.push(value);
-	newBackjoon[value.index] = value.difficulty;
-	bIsSolved[value.index] = false;
-}
-
-void Solved(const int& index)
-{
-	bIsSolved[index] = true;
-}
-
-void Recommend(const int& temp)
-{
-	bool bIsEnd = false;
-	if (temp == 1)
-	{
-		while (!bIsEnd)
-		{
-			Backjoon max = maxPQ.top();
-			if (bIsSolved[max.index] == true)
+			currentNode->linkedNodes[i]->time = max(currentNode->linkedNodes[i]->time, times[currentNode->linkedNodes[i]->index] + currentNode->time);
+			currentNode->linkedNodes[i]->weight--;
+			if (currentNode->linkedNodes[i]->weight == 0)
 			{
-				maxPQ.pop();
-			}
-			else
-			{
-				printf("%d\n", max.index);
-				bIsEnd = true;
-				return;
+				q.push(currentNode->linkedNodes[i]);
 			}
 		}
+
 	}
-	else
-	{
-		while (!bIsEnd)
-		{
-			Backjoon min = minPQ.top();
-			if (bIsSolved[min.index] == true)
-			{
-				minPQ.pop();
-			}
-			else
-			{
-				printf("%d\n", min.index);
-				bIsEnd = true;
-				return;
-			}
-		}
-	}
+	return nodes[lastIndex].time;
 }
 
 int main()
 {
-	int N;
-	cin >> N;
-	for (int i = 0; i < N; i++)
+	int T, N, K;
+	cin >> T;
+	vector<int> results(T);
+	for (int currentCount = 0; currentCount < T; currentCount++)
 	{
-		Backjoon temp;
-		cin >> temp.index >> temp.difficulty;
-		Add(temp);
+		cin >> N >>  K;
+		vector<Node> nodes(N);
+		for (int i = 0; i < N; i++)
+		{
+			cin >> nodes[i].time;
+			nodes[i].weight = 0;
+			nodes[i].index = i;
+		}
+		vector<int> weight(N,0);
+		for (int i = 0; i < K; i++)
+		{
+			int nodeIndex, linkedNode;
+			cin >> nodeIndex >> linkedNode;
+			nodes[nodeIndex - 1].linkedNodes.emplace_back(&nodes[linkedNode - 1]);
+			nodes[linkedNode - 1].weight++;
+		}
+		int W;
+		cin >> W;
+		results[currentCount] = GetTime(nodes, W-1);
 	}
-
-	int M;
-	cin >> M;
-	for (int i = 0; i < M; i++)
-	{
-		string str;
-		cin >> str;
-		if (str[0] == 'a')
-		{
-			int index, difficulty;
-			cin >> index >> difficulty;
-			Add({ index, difficulty });
-		}
-		else if (str[0] == 's')
-		{
-			int index;
-			cin >> index;
-			Solved(index);
-		}
-		else if (str[0] == 'r')
-		{
-			int index;
-			cin >> index;
-			Recommend(index);
-		}
+	for (int i = 0; i < results.size(); i++)
+	{		
+		printf("%d\n", results[i]);
 	}
 }
 ```
-
-다 풀었는데 같은 문제 난이도 수정을 문제 잘못 읽어서 초큼 걸렸다. ㅋ
