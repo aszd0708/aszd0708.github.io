@@ -16,7 +16,9 @@ comments: false
 
 각 부분까지 이동했을 때, 걸린 횟수를 Cost로 두고 다익스트라 알고리즘을 사용하면 금방 풀린다.
 
+코드
 ```
+
 #include <stdio.h>
 #include <iostream>
 
@@ -45,7 +47,7 @@ struct compare
 	}
 };
 
-Vector2 dir[8] = {{2, 1}, {-2, 1}, {2, -1}, {-2, -1}, {1, 2}, {1, -2} , {-1, 2} , {-1, -2} };
+Vector2 dir[8] = { {2, 1}, {-2, 1}, {2, -1}, {-2, -1}, {1, 2}, {1, -2} , {-1, 2} , {-1, -2} };
 
 void PrintVector(const vector<vector<int>>& v)
 {
@@ -164,5 +166,4 @@ int main()
 	}
 }
 ```
-
 BFS로 풀었을 때도 같은 답이 나오긴 했는데 약간 살짝 더 느리다.
