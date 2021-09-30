@@ -38,4 +38,7 @@ void UWrathThrowWeaponAnimNotify::Notify(USkeletalMeshComponent* MeshComp, UAnim
 
 이제 이 Notify를 붙여서 만들면
 
-<img src = "../assets/img/project/unreal_project_dark/17/throw_attack.gif" width="80%">  
+<img src = "../assets/img/project/unreal_project_dark/18/throw_weapon.gif" width="80%">
+
+오오 잘 된다.  
+이제 공격할때 터지는것과 이펙트 등등 넣자.
