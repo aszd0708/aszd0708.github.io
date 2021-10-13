@@ -1,70 +1,91 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 19621"
-date:   2021-09-21
-excerpt: "코딩테스트 백준 - 19621"
+title:  "코딩테스트 백준 - 5721 사탕 줍기 대회"
+date:   2021-10-01
+excerpt: "코딩테스트 백준 - 5721 사탕 줍기 대회"
 tag:
 - CodingTest
 comments: false
 ---
 
-<img src = "../assets/img/project/codingtest/backjoon/19621.PNG" width="100%">
+<img src = "../assets/img/project/codingtest/backjoon/5721.PNG" width="100%">
 
-[문제](https://www.acmicpc.net/problem/19621)
+[문제](https://www.acmicpc.net/problem/5721)
 
-또 다른 회의실 배정 문제이다. 이번 문제는 일반적으로 풀면 시간이 너무 걸려서 실패한다. 그래서 DP로 풀면 풀 수 있다.
+처음에 일반적으로 풀었는데 역시 틀렸다. ㅋ  
+
+DP로 풀면 가능하다. 각 가로에서 가장 큰 값을 가질 수 있게 연산하고, 세로에서도 그 작업을 하면 된다.
+
+역시... DP 어렵...
 
 ```
 #include <iostream>
+#include <queue>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-struct Conference
+int GetMaxCount(const vector<int>& v)
 {
-	int startTime;
-	int endTime;
-	int personnel;
-};
+	int maxCount;
 
-bool Compare(const Conference& lValue, const Conference& rValue)
-{
-	if (lValue.endTime == rValue.endTime)
+	if (v.size() > 1)
 	{
-		return lValue.startTime < rValue.startTime;
+		vector<int> DP(v.size(), 0);
+		for (int i = 0; i < v.size(); i++)
+		{
+			DP[i] = v[i];
+		}
+		maxCount = max(DP[0], DP[1]);
+		for (int i = 1; i < v.size(); i++)
+		{
+			if(i == 1)
+			{
+				DP[i] = maxCount;
+			}
+			else
+			{
+				DP[i] = max(DP[i - 1], DP[i - 2] + DP[i]);
+			}
+			maxCount = max(maxCount, DP[i]);
+		}
+		maxCount = DP[DP.size()-1];
 	}
-
-	return lValue.endTime < rValue.endTime;
+	else
+	{
+		maxCount = v[0];
+	}
+	return maxCount;
 }
 
 int main()
 {
-	int N;
-	cin >> N;
-	vector< Conference> v(N);
-	for (int i = 0; i < N; i++)
+	vector<int> results;
+	while (true)
 	{
-		cin >> v[i].startTime >> v[i].endTime >> v[i].personnel;
-	}
-	sort(v.begin(), v.end(), Compare);
-
-	int totalMax = 0;
-	for (int i = 0; i < N; i++)
-	{	
-		int maxValue = v[i].personnel;
-		for (int j = i - 1; j >= 0; j--)
+		int M, N;
+		cin >> M >> N;
+		if (M == 0 || N == 0) { break; }
+		vector<vector<int>> v(M, vector<int>(N, 0));
+		for (int i = 0; i < M; i++)
 		{
-			if (v[i].startTime >= v[j].endTime)
+			for (int j = 0; j < N; j++)
 			{
-				maxValue = max(maxValue, v[i].personnel + v[j].personnel);
+				cin >> v[i][j];
 			}
 		}
-		v[i].personnel = maxValue;
-		totalMax = max(totalMax, maxValue);
+
+		vector<int> DP(M);
+		for (int i = 0; i < M; i++)
+		{
+			DP[i] = GetMaxCount(v[i]);
+		}
+
+		results.emplace_back(GetMaxCount(DP));
 	}
-
-	cout << totalMax << endl;
+	for (int i = 0; i < results.size(); i++)
+	{
+		cout << results[i] << "\n";
+	}
 }
-
 ```

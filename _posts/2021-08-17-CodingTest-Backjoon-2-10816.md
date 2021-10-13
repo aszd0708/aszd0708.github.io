@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 10816"
+title:  "코딩테스트 백준 - 10816 숫자 카드 2"
 date:   2021-08-17
-excerpt: "코딩테스트 백준 - 10816"
+excerpt: "코딩테스트 백준 - 10816 숫자 카드 2"
 tag:
 - CodingTest
 comments: false

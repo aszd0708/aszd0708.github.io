@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 11559"
+title:  "코딩테스트 백준 - 11559 Puyo Puyo"
 date:   2021-09-19
-excerpt: "코딩테스트 백준 - 11559"
+excerpt: "코딩테스트 백준 - 11559 Puyo Puyo"
 tag:
 - CodingTest
 comments: false

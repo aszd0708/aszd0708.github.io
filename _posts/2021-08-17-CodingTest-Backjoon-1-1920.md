@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1920"
+title:  "코딩테스트 백준 - 1920 수 찾기"
 date:   2021-08-17
-excerpt: "코딩테스트 백준 - 1920"
+excerpt: "코딩테스트 백준 - 1920 수 찾기"
 tag:
 - CodingTest
 comments: false

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 4949"
+title:  "코딩테스트 백준 - 4949 균형잡힌 세상"
 date:   2021-08-13
-excerpt: "코딩테스트 백준 - 4949"
+excerpt: "코딩테스트 백준 - 4949 균형잡힌 세상"
 tag:
 - CodingTest
 comments: false

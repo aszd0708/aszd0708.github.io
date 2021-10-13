@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1715"
+title:  "코딩테스트 백준 - 1715 카드 정렬하기"
 date:   2021-09-15
-excerpt: "코딩테스트 백준 - 1715"
+excerpt: "코딩테스트 백준 - 1715 카드 정렬하기"
 tag:
 - CodingTest
 comments: false

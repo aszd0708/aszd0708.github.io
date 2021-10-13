@@ -1,70 +1,79 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 19621"
-date:   2021-09-21
-excerpt: "코딩테스트 백준 - 19621"
+title:  "코딩테스트 백준 - 17952 과제는 끝나지 않아!"
+date:   2021-09-23
+excerpt: "코딩테스트 백준 - 17952 과제는 끝나지 않아!"
 tag:
 - CodingTest
 comments: false
 ---
 
-<img src = "../assets/img/project/codingtest/backjoon/19621.PNG" width="100%">
+<img src = "../assets/img/project/codingtest/backjoon/17952.PNG" width="100%">
 
-[문제](https://www.acmicpc.net/problem/19621)
+[문제](https://www.acmicpc.net/problem/17952)
 
-또 다른 회의실 배정 문제이다. 이번 문제는 일반적으로 풀면 시간이 너무 걸려서 실패한다. 그래서 DP로 풀면 풀 수 있다.
+간단한 스텍 문제이다.
+
+
+그냥 스텍 시간 끝나면 갱신해주기만 하면 된다 
 
 ```
 #include <iostream>
 #include <vector>
+
 #include <algorithm>
 
 using namespace std;
 
-struct Conference
+struct Person
 {
-	int startTime;
-	int endTime;
-	int personnel;
+	int testValue;
+	int interviewValue;
 };
 
-bool Compare(const Conference& lValue, const Conference& rValue)
+bool ComparePerson(const Person& lValue, const Person& r
 {
-	if (lValue.endTime == rValue.endTime)
+	if (lValue.testValue == rValue.testValue)
 	{
-		return lValue.startTime < rValue.startTime;
+		return lValue.interviewValue > rValue.interviewVal
 	}
 
-	return lValue.endTime < rValue.endTime;
+	return lValue.testValue < rValue.testValue;
+}
+
+int GetPersonCount(vector<Person>& v)
+{
+	sort(v.begin(), v.end(), ComparePerson);
+
+	int maxRank = v[0].interviewValue;
+	int count = 1;
+	for (int i = 1; i < v.size(); i++)
+	{
+		if (maxRank > v[i].interviewValue)
+		{
+			count++;
+			maxRank = v[i].interviewValue;
+		}
+	}
+	return count;
 }
 
 int main()
 {
-	int N;
-	cin >> N;
-	vector< Conference> v(N);
-	for (int i = 0; i < N; i++)
+	int T;
+	cin >> T;
+
+	for (int i = 0; i < T; i++)
 	{
-		cin >> v[i].startTime >> v[i].endTime >> v[i].personnel;
-	}
-	sort(v.begin(), v.end(), Compare);
-
-	int totalMax = 0;
-	for (int i = 0; i < N; i++)
-	{	
-		int maxValue = v[i].personnel;
-		for (int j = i - 1; j >= 0; j--)
+		int N;
+		cin >> N;
+		vector<Person> v(N);
+		for (int j = 0; j < N; j++)
 		{
-			if (v[i].startTime >= v[j].endTime)
-			{
-				maxValue = max(maxValue, v[i].personnel + v[j].personnel);
-			}
+			cin >> v[j].testValue >> v[j].interviewValue;
 		}
-		v[i].personnel = maxValue;
-		totalMax = max(totalMax, maxValue);
+
+		cout << GetPersonCount(v) << "\n";
 	}
-
-	cout << totalMax << endl;
 }
-
 ```

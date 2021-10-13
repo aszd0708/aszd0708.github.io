@@ -1,153 +1,77 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 11559"
-date:   2021-09-19
-excerpt: "코딩테스트 백준 - 11559"
+title:  "코딩테스트 백준 - 19598 최소 회의실 갯수"
+date:   2021-09-21
+excerpt: "코딩테스트 백준 - 19598 최소 회의실 갯수"
 tag:
 - CodingTest
 comments: false
 ---
 
-<img src = "../assets/img/project/codingtest/backjoon/11559.PNG" width="100%">
+<img src = "../assets/img/project/codingtest/backjoon/19598.PNG" width="100%">
 
-[문제](https://www.acmicpc.net/problem/11559)
+[문제](https://www.acmicpc.net/problem/19598)
 
-뿌요뿌요 문제이다.
+회의실 문제이다. 그리디 알고리즘 문제인 경우 최대 회의실 갯수를 구하는 문제가 있지만, 이번 문제는 최소 회의실의 갯수를 구하는 문제이다.
 
-연결되어있는 같은 색이 4개 있으면 없애준다.  
-그런 뒤, 밑에 빈공간이 있는 색을 밑으로 내려준다.  
-그런뒤 같은 색이 있으면 없애준다.  
-그런 뒤, 밑에 빈공간이 있는 색을 밑으로 내려준다. ......
-
-반복이다.
-
-여기서 틀렸둔 부분이 있는데 같은 색이 한번 없어졌을 때 한번인지, 같은 색 들이 없어졌을때 한번인지 몰라서 틀렸다 ㅋ
-
-그리고 내리는 부분도 헷갈려서 시간이 좀 걸렸다.
+일단 먼저 정렬을 시킨 다음 작을 수대로 정렬한 우선순위 큐에 넣어 준다.  
+그런 뒤, 꺼내면서 현재 회의실 보다 작은지 큰지 비교해서 값을 넣어준다.
 
 ```
 #include <stdio.h>
 #include <iostream>
+
 #include <queue>
 #include <vector>
-#include <string>
+#include <algorithm>
 
 using namespace std;
 
-struct Vector2
+struct Conference
 {
-	int x, y;
+	int startTime, endTime;
 };
 
-Vector2 operator+(const Vector2& lValue, const Vector2 rValue)
+bool ConferenceCompare(const Conference& lValue, const Conference& rValue)
 {
-	return{ lValue.x + rValue.x , lValue.y + rValue.y };
+	return lValue.startTime < rValue.startTime;
 }
 
-Vector2 dir[4] = { {1,0},{-1,0}, {0,1}, {0,-1} };
-
-bool SetPop(vector<string>& v, vector<vector<bool>>& bIsVisited, const Vector2& startPosition)
+struct TimeCompare
 {
-	queue<Vector2> q;
-	q.push(startPosition);
-	char curColor = v[startPosition.y][startPosition.x];
-	vector<Vector2> positions;
-	while (!q.empty())
+	bool operator()(const int& lValue, const int& rValue)
 	{
-		Vector2 currentPosition = q.front();
-		q.pop();
-
-		if (bIsVisited[currentPosition.y][currentPosition.x] == true) { continue; }
-		bIsVisited[currentPosition.y][currentPosition.x] = true;
-
-		positions.emplace_back(currentPosition);
-
-		for (int i = 0; i < 4; i++)
-		{
-			Vector2 movePosition = currentPosition + dir[i];
-
-			if (movePosition.x < 0 || movePosition.x >= v[0].size() || movePosition.y < 0 || movePosition.y >= v.size()) { continue; }
-			if (v[movePosition.y][movePosition.x] == curColor)
-			{
-				q.push(movePosition);
-			}
-		}
+		return lValue > rValue;
 	}
-
-	if (positions.size() >= 4)
-	{
-		for (int i = 0; i < positions.size(); i++)
-		{
-			v[positions[i].y][positions[i].x] = '.';
-		}
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
-void SetDown(vector<string>& v)
-{
-	for (int i = v.size() - 1; i >= 0; i--)
-	{
-		for (int j = 0; j < v[i].size(); j++)
-		{
-			if (v[i][j] == '.') { continue; }
-			int currentY = i;
-			while (true)
-			{
-				if (currentY >= v.size() - 1 || j >= v[i].size()) { break; }
-				if (v[currentY + 1][j] != '.') { break; }
-
-				v[currentY + 1][j] = v[currentY][j];
-				v[currentY][j] = '.';
-				currentY++;
-			}
-		}
-	}
-}
+};
 
 int main()
 {
-	vector<string> v(12);
+	int N;
+	cin >> N;
+	vector<Conference> v(N);
 
-	for (int i = 0; i < v.size(); i++)
+	for (int i = 0; i < N; i++)
 	{
-		cin >> v[i];
-	}
-	int count = 0;
-	bool bIsPop = true;
-	vector<vector<bool>> bIsVisited(v.size(), vector<bool>(v[0].size(), false));
-	while (bIsPop)
-	{
-		bIsPop = false;
-		for (int i = 0; i < v.size(); i++)
-		{
-			for (int j = 0; j < v[i].size(); j++)
-			{
-				if (v[i][j] != '.')
-				{
-					bool isPop = SetPop(v, bIsVisited, { j,i });
-					if (isPop)
-					{
-						bIsPop = true;
-					}
-				}
-			}
-		}
-		SetDown(v);
-		for (int i = 0; i < v.size(); i++)
-		{
-			fill(bIsVisited[i].begin(), bIsVisited[i].end(), false);
-		}
-		if (bIsPop == true)
-		{
-			count++;
-		}
+		cin >> v[i].startTime >> v[i].endTime;
 	}
 
-	cout << count << "\n";
+	sort(v.begin(), v.end(), ConferenceCompare);
+	priority_queue<int, vector<int>, TimeCompare> pq;
+	pq.push(v[0].endTime);
+	int roomCount = 1;
+	for (int i = 1; i < N; i++)
+	{
+		if (v[i].startTime < pq.top())
+		{
+			roomCount++;
+		}
+		else
+		{
+			pq.pop();
+		}
+		pq.push(v[i].endTime);
+	}
+	cout << roomCount << "\n";
 }
 ```

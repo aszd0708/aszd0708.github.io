@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 2263"
+title:  "코딩테스트 백준 - 2263 트리의 순회"
 date:   2021-09-07
-excerpt: "코딩테스트 백준 - 2263"
+excerpt: "코딩테스트 백준 - 2263 트리의 순회"
 tag:
 - CodingTest
 comments: false

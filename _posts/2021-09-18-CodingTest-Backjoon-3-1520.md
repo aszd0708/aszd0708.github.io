@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1520"
+title:  "코딩테스트 백준 - 1520 내리막 길"
 date:   2021-09-18
-excerpt: "코딩테스트 백준 - 1520"
+excerpt: "코딩테스트 백준 - 1520 내리막 길"
 tag:
 - CodingTest
 comments: false

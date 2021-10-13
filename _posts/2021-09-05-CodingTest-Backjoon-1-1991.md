@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1991"
+title:  "코딩테스트 백준 - 1991 트리 순회"
 date:   2021-09-05
-excerpt: "코딩테스트 백준 - 1991"
+excerpt: "코딩테스트 백준 - 1991 트리 순회"
 tag:
 - CodingTest
 comments: false

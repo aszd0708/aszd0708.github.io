@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1439"
+title:  "코딩테스트 백준 - 1439 뒤집기"
 date:   2021-09-17
-excerpt: "코딩테스트 백준 - 1439"
+excerpt: "코딩테스트 백준 - 1439 뒤집기"
 tag:
 - CodingTest
 comments: false

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 9461"
+title:  "코딩테스트 백준 - 9461 파도반 수열"
 date:   2021-08-23
-excerpt: "코딩테스트 백준 - 9461"
+excerpt: "코딩테스트 백준 - 9461 파도반 수열"
 tag:
 - CodingTest
 comments: false

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1744"
+title:  "코딩테스트 백준 - 1744 수 묶기"
 date:   2021-09-15
-excerpt: "코딩테스트 백준 - 1744"
+excerpt: "코딩테스트 백준 - 1744 수 묶기"
 tag:
 - CodingTest
 comments: false

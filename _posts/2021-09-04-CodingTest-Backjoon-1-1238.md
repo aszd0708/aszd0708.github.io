@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1238"
+title:  "코딩테스트 백준 - 1238 파티"
 date:   2021-09-04
-excerpt: "코딩테스트 백준 - 1238"
+excerpt: "코딩테스트 백준 - 1238 파티"
 tag:
 - CodingTest
 comments: false

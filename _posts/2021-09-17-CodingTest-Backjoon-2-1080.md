@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1080"
+title:  "코딩테스트 백준 - 1080 행렬"
 date:   2021-09-17
-excerpt: "코딩테스트 백준 - 1080"
+excerpt: "코딩테스트 백준 - 1080 행렬"
 tag:
 - CodingTest
 comments: false

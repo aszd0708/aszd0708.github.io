@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 13305"
+title:  "코딩테스트 백준 - 13305 주유소"
 date:   2021-08-12
-excerpt: "코딩테스트 백준 - 13305"
+excerpt: "코딩테스트 백준 - 13305 주유소"
 tag:
 - CodingTest
 comments: false

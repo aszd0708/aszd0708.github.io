@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1339"
+title:  "코딩테스트 백준 - 1339 단어 수학"
 date:   2021-08-12
-excerpt: "코딩테스트 백준 - 1339"
+excerpt: "코딩테스트 백준 - 1339 단어 수학"
 tag:
 - CodingTest
 comments: false

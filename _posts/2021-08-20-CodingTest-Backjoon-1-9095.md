@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 9095"
+title:  "코딩테스트 백준 - 9095 1, 2, 3 더하기"
 date:   2021-08-20
-excerpt: "코딩테스트 백준 - 9095"
+excerpt: "코딩테스트 백준 - 9095 1, 2, 3 더하기"
 tag:
 - CodingTest
 comments: false

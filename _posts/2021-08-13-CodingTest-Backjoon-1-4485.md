@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 4485"
+title:  "코딩테스트 백준 - 4485 녹색 옷 입은 애가 젤다지?"
 date:   2021-08-13
-excerpt: "코딩테스트 백준 - 4485"
+excerpt: "코딩테스트 백준 - 4485 녹색 옷 입은 애가 젤다지?"
 tag:
 - CodingTest
 comments: false

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 8858"
+title:  "코딩테스트 백준 - 8858 거스름돈"
 date:   2021-08-12
-excerpt: "코딩테스트 백준 - 8858"
+excerpt: "코딩테스트 백준 - 8858 거스름돈"
 tag:
 - CodingTest
 comments: false

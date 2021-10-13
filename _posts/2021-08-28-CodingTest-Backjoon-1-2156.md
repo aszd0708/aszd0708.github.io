@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 2156"
+title:  "코딩테스트 백준 - 2156 포도주 시식"
 date:   2021-08-28
-excerpt: "코딩테스트 백준 - 2156"
+excerpt: "코딩테스트 백준 - 2156 포도주 시식"
 tag:
 - CodingTest
 comments: false

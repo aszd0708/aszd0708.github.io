@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 19621"
-date:   2021-09-21
-excerpt: "코딩테스트 백준 - 19621"
+title:  "코딩테스트 백준 - 19621 회의실 배정 2"
+date:   2021-09-22
+excerpt: "코딩테스트 백준 - 19621 회의실 배정 2"
 tag:
 - CodingTest
 comments: false

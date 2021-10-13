@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 7562"
+title:  "코딩테스트 백준 - 7562 나이트의 이동"
 date:   2021-09-18
-excerpt: "코딩테스트 백준 - 7562"
+excerpt: "코딩테스트 백준 - 7562 나이트의 이동"
 tag:
 - CodingTest
 comments: false

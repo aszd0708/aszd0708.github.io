@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1753"
+title:  "코딩테스트 백준 - 1753 최단경로"
 date:   2021-08-31
-excerpt: "코딩테스트 백준 - 1753"
+excerpt: "코딩테스트 백준 - 1753 최단경로"
 tag:
 - CodingTest
 comments: false

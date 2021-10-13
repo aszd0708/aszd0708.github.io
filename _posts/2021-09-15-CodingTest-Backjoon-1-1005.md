@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 1005"
+title:  "코딩테스트 백준 - 1005 ACM Craft"
 date:   2021-09-15
 excerpt: "코딩테스트 백준 - 1005"
 tag:

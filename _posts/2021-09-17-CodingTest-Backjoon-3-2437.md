@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 2437"
+title:  "코딩테스트 백준 - 2437 저울"
 date:   2021-09-17
-excerpt: "코딩테스트 백준 - 2437"
+excerpt: "코딩테스트 백준 - 2437 저울"
 tag:
 - CodingTest
 comments: false

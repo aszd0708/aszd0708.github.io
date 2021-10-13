@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 16234"
+title:  "코딩테스트 백준 - 16234 인구 이동"
 date:   2021-08-16
-excerpt: "코딩테스트 백준 - 16234"
+excerpt: "코딩테스트 백준 - 16234 인구 이동"
 tag:
 - CodingTest
 comments: false

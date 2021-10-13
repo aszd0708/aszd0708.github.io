@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "코딩테스트 백준 - 4963"
+title:  "코딩테스트 백준 - 4963 섬의 갯수"
 date:   2021-08-18
-excerpt: "코딩테스트 백준 - 4963"
+excerpt: "코딩테스트 백준 - 4963 섬의 갯수"
 tag:
 - CodingTest
 comments: false
