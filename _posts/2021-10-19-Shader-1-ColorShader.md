@@ -2,7 +2,7 @@
 layout: post
 title:  "셰이더 - 셰이더란?"
 date:   2021-10-19
-excerpt: "셰이더란?"
+excerpt: "컬러셰이더"
 tag:
 - Shader
 comments: false
