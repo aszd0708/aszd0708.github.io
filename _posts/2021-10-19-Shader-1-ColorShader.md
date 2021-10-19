@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "셰이더 - 셰이더란?"
+title:  "셰이더 - 컬러셰이더"
 date:   2021-10-19
 excerpt: "컬러셰이더"
 tag:
