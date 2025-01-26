@@ -24,11 +24,11 @@ style="display:inline-block;width:25px;height:25px"></a>
 <img src = "../assets/img/project/fortpolio/bitbucket.png" 
 style="display:inline-block;width:25px;height:25px"></a>
 
-## 이력
+# 이력
 
-# Work History
+## Work History
 
-## Com2Us
+### Com2Us
 2021.11.21 ~ 재직 중
 - FUTURE 스튜디오에서 V25 개발 및 서비스중
    - 아웃게임 앱서버 클라이언트 개발
@@ -40,9 +40,9 @@ style="display:inline-block;width:25px;height:25px"></a>
    - 다양한 재료 카드 사용을 위한 통합 스크립트 제작
    - 외부 번들 용량 체크를 위한 툴 추가
 
-# 제작한 프로젝트
+## 제작한 프로젝트
 
-## Unity
+### Unity
 
 - [V25](https://aszd0708.github.io/V25/){:target="_blank"}
 <br><a href="https://aszd0708.github.io/V25" target="_blank">
@@ -59,10 +59,10 @@ style="display:inline-block;width:25px;height:25px"></a>
 - [Zombie Run!!!!](https://aszd0708.github.io/ZombieRun/){:target="_blank"} : <br><a href="https://aszd0708.github.io/ZombieRun/" target="_blank">
 <img src = "../assets/img/project/fortpolio/zombie.png" width="50%"><br></a> 직접 자신이 좀비 무리를 조종하여 마을을 공격하는 게임
 
-## Unreal
+### Unreal
 
 - [SoulLike](https://aszd0708.github.io/SoulLike/){:target="_blank"} : 소울류 게임을 모방해서 만든 토이 프로젝트
 
-## Android
+### Android
 
 - [세탁기 알람](https://aszd0708.github.io/CoolTime/){:target="_blank"} : 교내 기숙사의 세탁기 알람
