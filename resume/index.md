@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "경력기술서"
+title: 경력기술서
 date: 2025-01-26
 tag: [resume, portfolio]
 - 
 comments: false
 ---
 
-# Com2Us
+# Com2us
 ## 2021.11.21 ~ 재직 중 </br> V25 아웃게임 프로그래머
 ### FUTURE 스튜디오에서 V25 개발 및 서비스중
 
