@@ -1,10 +1,8 @@
 ---
-layout: post
-title:  "경력기술서"
-date:   2025-01-26
-excerpt: "경력기술서"
-project: false
-tag:
+layout: page
+title: "경력기술서"
+date: 2025-01-26
+tag: [resume, portfolio]
 - 
 comments: false
 ---

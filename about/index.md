@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About the Theme
+title: 소개
 tags: [about, portfolio]
 date: 2025-01-26
 comments: false
