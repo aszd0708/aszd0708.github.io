@@ -29,6 +29,8 @@ style="display:inline-block;width:25px;height:25px"></a>
 ## Work History
 
 ### Com2Us
+
+[치킨](https://aszd0708.github.io/resume)
 2021.11.21 ~ 재직 중
 - FUTURE 스튜디오에서 V25 개발 및 서비스중
    - 아웃게임 앱서버 클라이언트 개발
