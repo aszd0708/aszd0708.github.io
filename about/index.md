@@ -19,10 +19,10 @@ comments: false
 - Email : <aszd0708@gmail.com>
 - Github : <a href="https://github.com/aszd0708/" target="_blank">
 <img src = "../assets/img/project/fortpolio/github.png" 
-style="margin-left:auto; width:25px;height:25px"></a>
+style="display:inline-block;width:25px;height:25px"></a>
 - Bitbucket : <a href="https://bitbucket.org/aszd0708/" target="_blank">
 <img src = "../assets/img/project/fortpolio/bitbucket.png" 
-style="margin-left:auto;width:25px;height:25px"></a>
+style="display:inline-block;width:25px;height:25px"></a>
 
 ## 이력
 
