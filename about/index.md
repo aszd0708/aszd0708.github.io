@@ -27,18 +27,15 @@ style="display:inline-block;width:25px;height:25px"></a>
 # 이력
 
 ## Work History
-
+[경력 기술서](https://aszd0708.github.io/resume)
 ### Com2Us
-
-[치킨](https://aszd0708.github.io/resume)
-2021.11.21 ~ 재직 중
+2021.11 ~ 재직 중
 - FUTURE 스튜디오에서 V25 개발 및 서비스중
    - 아웃게임 앱서버 클라이언트 개발
       - 매칭 시스템 개발
    - 경기 기록 및 리플레이 진입 개발
       - 인게임의 패킷 파싱 후 아웃게임 데이터 구조로 변환 후 사용
       - 선수 기록 파싱 기능 추가
-   - 국가대표 카드 컨텐츠 개발
    - 다양한 재료 카드 사용을 위한 통합 스크립트 제작
    - 외부 번들 용량 체크를 위한 툴 추가
 
