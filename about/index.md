@@ -2,7 +2,7 @@
 layout: page
 title: About the Theme
 tags: [about, portfolio]
-date: 2021-04-25
+date: 2025-01-26
 comments: false
 ---
     
@@ -10,61 +10,57 @@ comments: false
 
 ## 소개
 
-2015년부터 게임프로그래밍을 공부하고 있습니다.
+3년 경력을 갖고있는 게임 클라이언트 개발자 입니다.
+현재는 컴투스에서 서비스중인 야구게임 V25를 출시 및 서비스를 하고 있습니다.
 
-항상 재밌는 게임을 좋게 만들기 위해 노력하고 있습니다.
+컴투스 입사 전까지 '나 버릴 고양?', 'I'm ATM' 이 두개의 인디게임을 제작 및 출시 한 경험을 갖고있습니다.
 
 ## Contact
 - Email : <aszd0708@gmail.com>
-- Github : [https://github.com/aszd0708](https://github.com/aszd0708){:target="_blank"}
-- Bitbucket : [https://bitbucket.org/aszd0708](https://bitbucket.org/aszd0708){:target="_blank"}
+- Github : <a href="https://github.com/aszd0708/" target="_blank">
+<img src = "../assets/img/project/fortpolio/github.PNG" width="5%"></a>
+- Bitbucket : <a href="https://bitbucket.org/aszd0708/" target="_blank">
+<img src = "../assets/img/project/fortpolio/bitbucket.png" width="5%"></a>
 
 ## 이력
 
-### 수상 내역
+# Work History
 
-- `2019` 전문 인력 양성 프로젝트 콘텐츠 제작 최우수상
+## Com2Us
+2021.11.21 ~ 재직 중
+- FUTURE 스튜디오에서 V25 개발 및 서비스중
+   - 아웃게임 앱서버 클라이언트 개발
+      - 매칭 시스템 개발
+   - 경기 기록 및 리플레이 진입 개발
+      - 인게임의 패킷 파싱 후 아웃게임 데이터 구조로 변환 후 사용
+      - 선수 기록 파싱 기능 추가
+   - 국가대표 카드 컨텐츠 개발
+   - 다양한 재료 카드 사용을 위한 통합 스크립트 제작
+   - 외부 번들 용량 체크를 위한 툴 추가
 
-- `2019` 원광대학교 창의소프트웨어 아이디어 경진대회 우수상
+# 제작한 프로젝트
 
-- `2019` 원광대학교 창의소프트웨어 학습동아리 작품 경진대회 우수상
+## Unity
 
-- `2020` 실감형 콘텐츠 창작자 양성사업 해커톤 프로젝트 최우수상
+- [V25](https://aszd0708.github.io/V25/){:target="_blank"}
+<br><a href="https://aszd0708.github.io/V25" target="_blank">
+<img src = "../assets/img/project/fortpolio/V25.PNG" width="50%"><br></a> : 컴투스에서 서비스중인 야구 게임
 
-### 자격증
+- [집사가 돼 줄 고양?(가제)](https://aszd0708.github.io/Meow/){:target="_blank"}
+<br><a href="https://aszd0708.github.io/Meow/" target="_blank">
+<img src = "../assets/img/project/fortpolio/Meow.PNG" width="50%"><br></a> :  마을에 있는 동물들을 찾아서 동물의 집에 보내는 모바일 게임
 
-- Unity Certified Associate: Game Developer
+- [I'm ATM](https://aszd0708.github.io/ImATM/){:target="_blank"}
+<br><a href="https://aszd0708.github.io/ImATM/" target="_blank">
+<img src = "../assets/img/project/fortpolio/imatm.PNG" width="50%"><br></a> :  자신이 직접 고장난 ATM 기기에 들어가서 돈을 인출해주는 아케이드 핸드폰 게임 ([GooglePlayStore 정식출시](https://play.google.com/store/apps/details?id=com.MatZip.ImATM){:target="_blank"})
 
-## Skill Set
+- [Zombie Run!!!!](https://aszd0708.github.io/ZombieRun/){:target="_blank"} : <br><a href="https://aszd0708.github.io/ZombieRun/" target="_blank">
+<img src = "../assets/img/project/fortpolio/zombie.PNG" width="50%"><br></a> :  직접 자신이 좀비 무리를 조종하여 마을을 공격하는 게임
 
-|1 - Basic|2 - Demonstrating|3 - Proficient|4 - Expert|
-|:------:|:---:|:---:|:---:|
-|관련 지식이나 경험이 매우 제한적|능숙하진 않지만 경험이 있음|관련 지식과 경험이 풍부한 편이며 능숙하게 업무 가능한 수준|관련 지식과 경험이 많고 매우 유능함|
- 기본적인 업무 수행에도 도움이 필요한 수준|기본적인 업무 수행 수준이 가능한 수준|업무 수행에 특병한 도움이 필요 없음|다른 사람을 리드하고 교육할 수 있을 정도의 수준|
-
- - Language
-    - C(2), C#(2.5), C++(2.5), JAVA(2)
- - Engine
-    - Unity(2), Unreal(2)
- - API
-    - DirectX 11(2)
-
-## 제작한 프로젝트
-
-### Unity
-
-- [UnityManagers](https://aszd0708.github.io/UnityGameManager/){:target="_blank"} : 유니티 프로젝트 제작중 사용한 자체제작 유틸리티
-
-- [집사가 돼 줄 고양?(가제)](https://aszd0708.github.io/Meow/){:target="_blank"} : 마을에 있는 동물들을 찾아서 동물의 집에 보내는 모바일 게임
-
-- [I'm ATM](https://aszd0708.github.io/ImATM/){:target="_blank"} : 자신이 직접 고장난 ATM 기기에 들어가서 돈을 인출해주는 아케이드 핸드폰 게임 ([GooglePlayStore 정식출시](https://play.google.com/store/apps/details?id=com.MatZip.ImATM){:target="_blank"})
-
-- [Zombie Run!!!!](https://aszd0708.github.io/ZombieRun/){:target="_blank"} : 직접 자신이 좀비 무리를 조종하여 마을을 공격하는 게임
-
-### Unreal
+## Unreal
 
 - [SoulLike](https://aszd0708.github.io/SoulLike/){:target="_blank"} : 소울류 게임을 모방해서 만든 토이 프로젝트
 
-### Android
+## Android
 
 - [세탁기 알람](https://aszd0708.github.io/CoolTime/){:target="_blank"} : 교내 기숙사의 세탁기 알람
