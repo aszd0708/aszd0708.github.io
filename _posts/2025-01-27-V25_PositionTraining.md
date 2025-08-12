@@ -16,38 +16,38 @@ comments: false
 
 재료를 넣어 레벨업을 해, 스탯이 올라갑니다.
 
-<img src = "../assets/img/project/fortpolio/Positiontraining/position_select.jpg" width="20%">
+<img src = "..\assets\img\project\fortpolio\Positiontraining\position_select.jpg" width="20%">
 
 원하는 포지션을 선택합니다.
 
-<img src = "../assets/img/project/fortpolio/Positiontraining/selected_position.jpg" width="20%">
+<img src = "..\assets\img\project\fortpolio\Positiontraining\selected_position.jpg" width="20%">
 
 선수 카드 및 강과, 훈련 카드를 넣을수 있게 되어 있습니다.
 
-<img src = "../assets/img/project/fortpolio/Positiontraining/popup_insert_player.jpg" width="20%">
+<img src = "..\assets\img\project\fortpolio\Positiontraining\popup_insert_player.jpg" width="20%">
 
 두개 이상 선수 카드를 넣을경우 다음과 같은 팝업이 뜨고,
 
-<img src = "../assets/img/project/fortpolio/Positiontraining/popup_insert_card.jpg" width="20%">
+<img src = "..\assets\img\project\fortpolio\Positiontraining\popup_insert_card.jpg" width="20%">
 
 재료 카드를 넣을 경우 위와 같은 팝업이 뜨게 됩니다.
 
 그리고 모든 재료를 넣었을 경우
 
-<img src = "../assets/img/project/fortpolio/Positiontraining/result.gif" width="20%">
+<img src = "..\assets\img\project\fortpolio\Positiontraining\result.gif" width="20%">
 
 연출이 나오고 스탯이 반영 됩니다.
 
 5,10,15,20레벨일 경우에 스킬 및 스탯 보너스가 추가됩니다.
 
-<img src = "../assets/img/project/fortpolio/Positiontraining/insert_specific_player.jpg" width="20%">
+<img src = "..\assets\img\project\fortpolio\Positiontraining\insert_specific_player.jpg" width="20%">
 
 특정 레벨 이후에는 필요한 특정한 카드가 생깁니다.
 
 특정한 카드가 인벤토리에 있는 경우 포지션특훈에 레드닷이 생기며, 해당 카드에는 특정한 카드에만 표시되는 알림 티커가 추가됩니다.
 
 
-<img src = "../assets/img/project/fortpolio/Positiontraining/popup_all_register.jpg" width="20%">
+<img src = "..\assets\img\project\fortpolio\Positiontraining\popup_all_register.jpg" width="20%">
 
 특정한 카드가 없을때 까지 현재 소지하고 있는 아이템들을 검사하여 자동으로 넣을수 있게 합니다.
 
