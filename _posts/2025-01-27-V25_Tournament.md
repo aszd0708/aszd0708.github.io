@@ -12,7 +12,7 @@ comments: false
 
 ## 메인
 
-<img src = "../assets/img/project/fortpolio/Tournament/main.jpg" width="40%">
+<img src = "../assets/img/project/fortpolio/Tournament/main.jpg" width="20%">
 
 게임 모드에 진입 시, 현재 할수 있는 경기 (4강전이면 4강전으로) 진입을 합니다.
 
@@ -26,16 +26,16 @@ PlayBall을 누를 경우 인게임으로 진입을 합니다.
 
 상대의 라인업을 누를 경우 상대의 오버롤 및 라인업을 확인할 수 있습니다.
 
-<img src = "../assets/img/project/fortpolio/Tournament/select_level.jpg" width="40%">
+<img src = "../assets/img/project/fortpolio/Tournament/select_level.jpg" width="20%">
 
 가운데 난이도 버튼을 누르게 되면, 현재 선택할 수 있는 난이도를 선택할 수 있습니다.
 
-<img src = "../assets/img/project/fortpolio/Tournament/play_reward.jpg" width="40%">
+<img src = "../assets/img/project/fortpolio/Tournament/play_reward.jpg" width="20%">
 
 하단의 보상 정보를 누르면, 플레이를 하면서 얻을 수 있는 보상들을 기획데이터를 참조해서 보여줍니다.
 
 ## 보상
 
-<img src = "../assets/img/project/fortpolio/Tournament/game_reward.jpg" width="40%">
+<img src = "../assets/img/project/fortpolio/Tournament/game_reward.jpg" width="20%">
 
 게임을 진행하면서 얻은 토큰의 갯수에 따라 보상을 얻을 수 있습니다.
