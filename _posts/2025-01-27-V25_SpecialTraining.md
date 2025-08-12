@@ -7,8 +7,7 @@ tag:
 -
 comments: false
 ---
-
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ekf2nrWJGWA&t=146s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Youtube](../assets/img/project/fortpolio/youtube_icon.png)](https://www.youtube.com/watch?v=ekf2nrWJGWA&t=146s)
 
 ## 특훈
 
