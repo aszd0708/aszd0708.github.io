@@ -1,28 +1,33 @@
 ---
 layout: post
-title:  "특훈"
-date:   2025-01-26
-excerpt: "특훈"
+title:  "훈련돌파"
+date:   2025-08-10
+excerpt: "훈련돌파"
 tag:
 -
 comments: false
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ekf2nrWJGWA&t=146s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=ekf2nrWJGWA&t=34s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## 특훈
+## 훈련돌파
 
-게임 스탯 + 1 과 세트덱 포인트 + 1 을 하게 하는 육성 방법 입니다.
+훈련 MAX 레벨을 올릴수 있는 성장 방법
 
-<img src = "../assets/img/project/fortpolio/SpecialTraining/main.jpg" width="40%">
+<img src = "../assets/img/project/fortpolio/Transcendence/main.jpg" width="40%">
 
-먼저 올리고 싶은 카드를 선택합니다. 카드는 현재 인벤토리 및 라인업에 있는 카드 입니다. 각 카드마다 특훈 레벨과 현재 세트덱 팀, 세트덱 포인트를 출력합니다.
+먼저 올리고 싶은 카드를 선택합니다. 카드는 현재 인벤토리 및 라인업에 있는 카드 입니다. 각 카드마다 현재 훈련 레벨 및 MAX 레벨을 출력합니다.
 
-<img src = "../assets/img/project/fortpolio/SpecialTraining/selected.jpg" width="40%">
+<img src = "../assets/img/project/fortpolio/Transcendence/selected.jpg" width="40%">
 
-선택을 하면, 현재 갖고있는 아이템 및 선수 카드들이 출력되며, 각 카드를 터치하면 실시간으로 경험치 및 올라가는 레벨을 확인할수 있습니다.
+선수를 선택하면, 현재 레벨과 소지아이템/필요한 아이템 및 포인트를 출력합니다.
 
-<img src = "../assets/img/project/fortpolio/SpecialTraining/result.gif" width="40%">
+10회 연속 돌파 버튼은 현재 아이템 및 포인트를 계산해서 1~10회까지 할수있게 합니다. (3회만 가능하면 3회 연속 돌파) 만약 1레벨이라도 올랐을 경우에는 더이상 하지 않고 연출만 출력합니다.
 
-레벨을 올리려고 하면, 원하는 스탯을 선택한 후, 연출이 나오게 됩니다.
+<img src = "../assets/img/project/fortpolio/Transcendence/continuous.jpg" width="40%">
 
+연속돌파 하기 버튼은 원하는 레벨을 설정하고 레벨업을 합니다. 해당 레벨을 달성 하거나, 아이템의 소지 갯수에 따라 자동으로 정지 합니다.
+
+<img src = "../assets/img/project/fortpolio/Transcendence/result.gif" width="40%">
+
+연출을 표기하고 종료 합니다.

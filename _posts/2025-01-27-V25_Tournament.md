@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "토너먼트"
+date:   2025-08-10
 excerpt: "토너먼트"
 tag:
 -
@@ -28,3 +29,13 @@ PlayBall을 누를 경우 인게임으로 진입을 합니다.
 <img src = "../assets/img/project/fortpolio/Tournament/select_level.jpg" width="40%">
 
 가운데 난이도 버튼을 누르게 되면, 현재 선택할 수 있는 난이도를 선택할 수 있습니다.
+
+<img src = "../assets/img/project/fortpolio/Tournament/play_reward.jpg" width="40%">
+
+하단의 보상 정보를 누르면, 플레이를 하면서 얻을 수 있는 보상들을 기획데이터를 참조해서 보여줍니다.
+
+## 보상
+
+<img src = "../assets/img/project/fortpolio/Tournament/game_reward.jpg" width="40%">
+
+게임을 진행하면서 얻은 토큰의 갯수에 따라 보상을 얻을 수 있습니다.

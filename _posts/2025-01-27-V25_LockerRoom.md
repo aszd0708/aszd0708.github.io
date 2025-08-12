@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "락커룸"
+date:   2025-08-10
 excerpt: "락커룸"
 tag:
 -

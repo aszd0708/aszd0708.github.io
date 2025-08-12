@@ -17,3 +17,4 @@ https://huggingface.co/unity/sentis-whisper-tiny
 회사에서 AI를 결제 해줘서 (야호!) 그 AI를 활용해서 만들어 보려고 한다.
 
 음성은 동물의 숲이나, MiSide의 미타 처럼 처음 음만 살짝 나오는 느낌의 음성을 활용하려 한다.
+

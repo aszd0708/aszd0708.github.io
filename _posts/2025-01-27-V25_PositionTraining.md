@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "포지션 특훈"
+date:   2025-08-10
 excerpt: "포지션 특훈"
 tag:
 -
