@@ -1,12 +1,14 @@
 ---
 layout: post
 title:  "Unreal Lyra 공부"
-excerpt: "그깟 공놀이, 할 거면 제대로 하자!"
+excerpt: "Lyra!"
 project: true
 tag:
 -
 comments: false
 ---
+
+<img src = "../assets/img/project/Lyra/main.png" width="100%">
 
 [Lyra](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/lyra-sample-game-in-unreal-engine)
 
