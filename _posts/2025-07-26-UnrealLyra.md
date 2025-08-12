@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Unreal Lyra 공부"
+date:   2025-08-11
 excerpt: "Lyra!"
 project: true
 tag:
