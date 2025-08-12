@@ -11,13 +11,11 @@ comments: false
 락커룸에선 유니폼, 락커룸 효과만 담당
 
 ## 유니폼
-<img src = "../assets/img/project/fortpolio/LockerRoom
-/uniform_main.jpg" width="20%">
+<img src = "../assets/img/project/fortpolio/LockerRoom/uniform_main.jpg" width="20%" height = "50%"
 
 원하는 유니폼을 선택 후 제작하기를 누르면,
 
-<img src = "../assets/img/project/fortpolio/LockerRoom
-/uniform_preview.jpg" width="20%">
+<img src = "../assets/img/project/fortpolio/LockerRoom/uniform_preview.jpg" width="20%" height = "50%"
 
 해당 유니폼을 만들기 위한 재료들을 보여줍니다.
 
@@ -25,13 +23,11 @@ comments: false
 
 만들게 되면,
 
-<img src = "../assets/img/project/fortpolio/LockerRoom
-/uniform_made.jpg" width="20%">
+<img src = "../assets/img/project/fortpolio/LockerRoom/uniform_made.jpg" width="20%" height = "50%"
 
 착용하기 버튼이 활성화 되며, 착용을 하게 되면
 
-<img src = "../assets/img/project/fortpolio/LockerRoom
-/main.jpg" width="20%">
+<img src = "../assets/img/project/fortpolio/LockerRoom/main.jpg" width="20%" height = "50%"
 
 게임의 메인 화면 및 인게임에서 적용이 됩니다.
 
@@ -39,8 +35,7 @@ comments: false
 
 ### 알림
 
-<img src = "../assets/img/project/fortpolio/LockerRoom
-/uniform_material_alarm.jpg" width="20%">
+<img src = "../assets/img/project/fortpolio/LockerRoom/uniform_material_alarm.jpg" width="20%" height = "50%">
 
 원하는 알림을 하게 되면, 그 조건에 맞춰 락커룸에 레드닷을 띄워줍니다.
 
@@ -61,7 +56,6 @@ comments: false
 
 ## 락커룸 효과
 
-<img src = "../assets/img/project/fortpolio/LockerRoom
-/effect_main.jpg" width="40%">
+<img src = "../assets/img/project/fortpolio/LockerRoom/effect_main.jpg" width="40%" height = "50%"
 
 이모티콘 및 유니폼을 만들게 되면, 포인트를 받으며 포인트를 소모하여 스탯을 올릴수 있습니다. 해당 스탯은 적용하는 즉시 반영이 되며, 되돌리기 버튼을 클릭 하면 가장 최근에 선택한 스탯부터 하나씩 선택이 해제됩니다.
